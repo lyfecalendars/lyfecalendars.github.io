@@ -1,7 +1,9 @@
 ---
 title: Car Care 2025
 layout: default
-[🏠 Home](/) · [🔧 Home Maintenance](/home) · [🚗 Car Care](/car) · [💪 Health Check-In](/health)
+<div align="center" style="background-color:#f6f8fa; padding:10px; border-radius:8px;">
+  [🏠 Home](/) · [🛠️ Home Maintenance](/home) · [🚗 Car Care](/car) · [💪 Health Check-In](/health)
+</div>
 
 ---
 

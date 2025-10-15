@@ -1,0 +1,403 @@
+BEGIN:VCALENDAR
+PRODID:-//LifeCalendars//Home Maintenance 2025//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Home Maintenance 2025
+X-WR-TIMEZONE:UTC
+BEGIN:VEVENT
+UID:62945bb7-3713-41bb-91d1-9f505737895d@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250101
+SUMMARY:Replace HVAC filter
+DESCRIPTION:Swap in a fresh furnace/AC filter to maximize efficiency.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Replace HVAC filter is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:0ab9691e-6a9d-487f-9974-2017eae69d39@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250105
+SUMMARY:Test smoke & CO detectors
+DESCRIPTION:Press and hold test buttons; replace batteries if needed.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Test smoke & CO detectors is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:86191c5f-0442-40ea-be3c-b58a6ed80663@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250120
+SUMMARY:Clean dryer vent & lint duct
+DESCRIPTION:Reduce fire risk; vacuum behind dryer and clear exterior vent flap.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean dryer vent & lint duct is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:64890639-5a27-43ca-a921-108b63845183@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250208
+SUMMARY:Flush water heater (partial drain)
+DESCRIPTION:Drain a few gallons to remove sediment. Set water heater to 'vacation' if traveling.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Flush water heater (partial drain) is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:1a7d18e7-39a8-4943-8bec-86d800e42f6d@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250215
+SUMMARY:Check grout/caulk in kitchens & baths
+DESCRIPTION:Seal gaps to prevent water damage and mold.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Check grout/caulk in kitchens & baths is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:617c984a-e698-4c3a-9b15-5d2d216184d4@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250301
+SUMMARY:Replace HVAC filter
+DESCRIPTION:Spring allergy season—use appropriate MERV rating.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Replace HVAC filter is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cabf33ff-d3bc-4ea5-a1a4-b690d8270034@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250315
+SUMMARY:Clean gutters & downspouts (post-winter)
+DESCRIPTION:Ensure drainage before spring rains.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean gutters & downspouts (post-winter) is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:642ddd0e-1b1d-4944-ac2f-759c357b0d2d@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250322
+SUMMARY:Prep lawn & outdoor equipment
+DESCRIPTION:Sharpen mower blade, check fuel, start sprinkler checks.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Prep lawn & outdoor equipment is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:0988da0c-e710-4462-968d-a8a8d2a38ab2@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250405
+SUMMARY:Perimeter pest prevention
+DESCRIPTION:Inspect/seal gaps; optional exterior treatment.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Perimeter pest prevention is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:7ef9ccc0-bad5-41b4-b3f2-52ed919cadd1@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250412
+SUMMARY:Test & open irrigation system
+DESCRIPTION:Check for leaks; set seasonal watering schedule.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Test & open irrigation system is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:24372c71-7e0b-4050-a011-b30159ec56a0@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250419
+SUMMARY:Deep-clean fridge coils & gasket
+DESCRIPTION:Unplug first; improves efficiency.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Deep-clean fridge coils & gasket is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:301b93d7-30c8-421c-928c-b771bd0d83ce@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250501
+SUMMARY:Schedule A/C service or self-check
+DESCRIPTION:Verify cooling before first heat wave.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Schedule A/C service or self-check is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ea1214b4-a5bd-4652-b62c-0180f9d6be22@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250510
+SUMMARY:Inspect outdoor faucets & hoses
+DESCRIPTION:Look for leaks after winter; replace washers as needed.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Inspect outdoor faucets & hoses is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:782fd48d-4072-4510-b87d-07691436d691@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250518
+SUMMARY:Deck/patio wash & inspect
+DESCRIPTION:Clean surfaces; check for loose boards/rails.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Deck/patio wash & inspect is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b290dabe-7b0b-437c-8451-72e39508eaa4@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250601
+SUMMARY:Replace HVAC filter
+DESCRIPTION:Summer run-up—keep airflow strong.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Replace HVAC filter is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:c5b40138-d3fe-42c2-bf1a-5c9146807b86@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250608
+SUMMARY:Test sump pump
+DESCRIPTION:Pour a bucket of water to confirm operation.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Test sump pump is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:986c4cb8-6849-47a4-9faa-14062f4d42e5@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250615
+SUMMARY:Clean bath & kitchen exhaust fans
+DESCRIPTION:Vacuum grills to improve airflow.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean bath & kitchen exhaust fans is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:f921db3a-6ff0-4b3e-80a4-6045d733cea1@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250705
+SUMMARY:Quarterly safety test: smoke & CO
+DESCRIPTION:Replace batteries if chirping; vacuum detectors.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Quarterly safety test: smoke & CO is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:65b7c978-98f0-4689-8bd4-39c4ac631ea2@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250712
+SUMMARY:Inspect attic & roof from ground
+DESCRIPTION:Look for lifted shingles, pests, or moisture signs.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Inspect attic & roof from ground is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:af9b87d5-1ebd-4221-be33-9db0e7c61f29@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250801
+SUMMARY:Replace HVAC filter
+DESCRIPTION:End-of-summer swap.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Replace HVAC filter is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:09f16658-49d9-427d-bc71-ac787287b0b3@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250809
+SUMMARY:Service garage door & lube tracks
+DESCRIPTION:Tighten hardware; test auto-reverse safety.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Service garage door & lube tracks is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:85675a10-da10-4357-997d-0c6a6a8d172e@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250901
+SUMMARY:Schedule furnace tune-up
+DESCRIPTION:Book HVAC service before peak season; replace filter after service if needed.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Schedule furnace tune-up is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:112ebfeb-60c4-454a-aa45-f46dc5f59eee@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250912
+SUMMARY:Chimney/fireplace inspection
+DESCRIPTION:Sweep if wood-burning; verify gas logs are safe.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Chimney/fireplace inspection is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:edddb153-55f5-4370-9383-320e143d80a4@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20250921
+SUMMARY:Clean gutters (early fall)
+DESCRIPTION:Prepare for leaf fall; ensure downspout extensions.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean gutters (early fall) is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:ef121ebe-c1d7-4a33-a4b6-5dc8bc160e58@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251005
+SUMMARY:Quarterly safety test: smoke & CO
+DESCRIPTION:Swap batteries on older units; test all alarms.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Quarterly safety test: smoke & CO is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:1244d340-fd5b-49a9-8497-e042f2093b51@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251020
+SUMMARY:Winterize outdoor faucets & hoses
+DESCRIPTION:Shut off & drain hose bibs; store hoses.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Winterize outdoor faucets & hoses is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:41fcd1af-a1be-45ac-9e79-44b867057716@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251026
+SUMMARY:Reverse ceiling fans for heating season
+DESCRIPTION:Clockwise on low to push warm air down.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Reverse ceiling fans for heating season is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2a191555-0ec4-405a-882c-dfdc42ff8330@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251101
+SUMMARY:Replace HVAC filter
+DESCRIPTION:Start of heating season—fresh filter.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Replace HVAC filter is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:4b8decf9-3146-49b3-bcff-aecf2cd4f892@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251108
+SUMMARY:Inspect weatherstripping & door sweeps
+DESCRIPTION:Seal drafts to save on heating.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Inspect weatherstripping & door sweeps is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:a6e873eb-2fab-4860-986e-637f154644df@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251115
+SUMMARY:Clean dishwasher filter & run cleaner cycle
+DESCRIPTION:Improves wash performance; remove odors.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Clean dishwasher filter & run cleaner cycle is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:afbb1ca2-966b-4038-b6ee-88294058c344@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251201
+SUMMARY:Draft check & window/door inspection
+DESCRIPTION:Foam seal or caulk gaps; close unused vents.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Draft check & window/door inspection is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:b4f56d56-847f-4684-89af-a96704a5acdd@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251205
+SUMMARY:Replace fridge water filter (if applicable)
+DESCRIPTION:Follow manufacturer interval.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Replace fridge water filter (if applicable) is tomorrow.
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:c7f7a0d3-ef9c-4167-a4c3-4c354c5c0ecb@homecare
+DTSTAMP:20251015T000000Z
+DTSTART;VALUE=DATE:20251212
+SUMMARY:Deep clean garbage disposal & P-traps
+DESCRIPTION:Use brush/ice/lemon; clear traps if slow.
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reminder: Deep clean garbage disposal & P-traps is tomorrow.
+END:VALARM
+END:VEVENT
+END:VCALENDAR

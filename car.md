@@ -9,7 +9,7 @@ layout: default
   <span>•</span>
   <a href="/car">🚗 Car Care</a>
   <span>•</span>
-  <a href="/health">💪 Health Check-In</a>
+  <a href="/health">❤️ Health Check-In</a>
 </div>
 
 <style>

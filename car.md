@@ -37,7 +37,7 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 @media (max-width:720px){ .lc-grid{ grid-template-columns:1fr; } }
 </style>
 
-## Thanks for your Purchase! Download your 🚗 Car Care Calendar below.
+## Thanks for your Purchase! Download your Car Care Calendar below. 🚗 
 Keep your vehicle on schedule with smart reminders that land right in your calendar.
 
 <div class="lc-btns">

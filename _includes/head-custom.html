@@ -1,0 +1,20 @@
+<!-- Site-wide custom head additions (Cayman-safe) -->
+<script>
+  // Emoji favicon
+  const emoji = "📅";
+  const canvas = document.createElement("canvas");
+  canvas.width = 64; canvas.height = 64;
+  const ctx = canvas.getContext("2d");
+  ctx.font = "48px serif";
+  ctx.fillText(emoji, 8, 48);
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.href = canvas.toDataURL();
+  document.head.appendChild(link);
+
+  // Match mobile tab color to your footer tone
+  const meta = document.createElement("meta");
+  meta.name = "theme-color";
+  meta.content = "#F8F1DE";
+  document.head.appendChild(meta);
+</script>

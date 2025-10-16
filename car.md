@@ -1,189 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Car Care Calendar – Life Calendars</title>
+---
+title: Car Care
+layout: default
+---
 
-  <!-- Theme & Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #222;
-    }
+<!-- =================== PAGE STYLES =================== -->
+<style>
+/* Hide the built-in Cayman header for this page */
+.page-header { display: none !important; }
 
-    /* ================================
-       HERO BANNER
-    ================================= */
-    .hero-banner {
-      width: 100%;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #b7d0e7, #dfe8f3); /* soft sky gradient */
-    }
+/* Full-bleed hero banner (edge-to-edge), 200px tall */
+.hero-bleed {
+  width: 100vw;
+  height: 200px;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;   /* show full image without crop */
+  background-color: #ffffff;
+  max-width: none !important;
+}
 
-    .hero-banner img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      object-position: center top;
-    }
+/* Gradient fallback (matches banner tones) */
+.hero-bleed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #b0d0e8, #f5eec9);
+  opacity: 0.35;
+}
 
-    /* ================================
-       NAVIGATION
-    ================================= */
-    nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1.5rem;
-      background: #f8fafc;
-      border-bottom: 1px solid #e3e3e3;
-      padding: 1rem 0;
-      font-weight: 600;
-    }
+/* Navigation bar */
+.lc-nav {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  background: #f6f8fa;
+  padding: .6rem .9rem;
+  border-radius: 10px;
+  margin: 1rem auto 1.25rem;
+  width: fit-content;
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+}
+.lc-nav a { text-decoration: none; font-weight: 600; color: #0b5bd3; }
+.lc-nav a:hover { text-decoration: underline; }
+.lc-nav span { opacity: .5; }
 
-    nav a {
-      color: #004aad;
-      text-decoration: none;
-      transition: color 0.2s ease-in-out;
-    }
+/* Buttons */
+.lc-btns { display: flex; gap: .6rem; flex-wrap: wrap; margin: .9rem 0 1.25rem; }
+.lc-btn {
+  display: inline-block;
+  padding: .7rem 1rem;
+  border-radius: 10px;
+  background: #2ea44f;
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+.lc-btn.secondary { background: #0366d6; }
 
-    nav a:hover {
-      color: #0072ff;
-    }
+.lc-meta { color: #586069; font-size: .95rem; }
+hr.lite { border: 0; border-top: 1px solid #eaecef; margin: 1.25rem 0; }
 
-    /* ================================
-       MAIN CONTENT
-    ================================= */
-    .container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      text-align: left;
-    }
+@media (max-width: 720px) {
+  .lc-nav { border-radius: 0; width: 100%; }
+}
+</style>
 
-    h1 {
-      color: #109648;
-      font-weight: 600;
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
+<!-- =================== HERO IMAGE =================== -->
+<div class="hero-bleed"
+     style="background-image:url('{{ "/purchase-hero.png?v=100" | relative_url }}');">
+</div>
 
-    p {
-      line-height: 1.6;
-      color: #333;
-    }
+<!-- =================== IN-PAGE MENU =================== -->
+<div class="lc-nav" role="navigation" aria-label="Car Care sections">
+  <a href="#whats-included">What’s Included</a>
+  <span>•</span>
+  <a href="#how-it-works">How It Works</a>
+  <span>•</span>
+  <a href="#faq">FAQ</a>
+  <span>•</span>
+  <a href="#support">Support</a>
+  <span>•</span>
+  <a href="#more-calendars">More Calendars</a>
+</div>
 
-    /* ================================
-       BUTTONS
-    ================================= */
-    .button-row {
-      margin: 1.5rem 0;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+<!-- =================== MAIN CONTENT =================== -->
+## Thanks for your purchase! Subscribe to your Car Care calendar below. 🚗
+Keep your vehicle on schedule with smart reminders that land right in your calendar.
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.75rem 1.25rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      color: #fff;
-      transition: transform 0.1s ease-in-out;
-    }
+<div class="lc-btns">
+  <a class="lc-btn" href="/Car_Care.ics">📅 Subscribe (.ics)</a>
+  <a class="lc-btn secondary" href="#how-it-works">ℹ️ How It Works</a>
+</div>
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+<div class="lc-meta">
+Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1-day-before alert (you can edit or mute anytime).
+</div>
 
-    .btn-subscribe {
-      background: #1dbf73;
-    }
+<hr class="lite" />
 
-    .btn-info {
-      background: #0072ff;
-    }
+## <a id="whats-included"></a>What’s Included
+A curated yearly rhythm that fits most daily drivers — no mileage tracking required.
 
-    .btn .emoji {
-      margin-right: 0.5rem;
-    }
+- **Oil change** — every 4 months  
+- **Tire rotation** — every 6 months  
+- **Battery & terminals check** — every 6 months  
+- **Wipers & washer fluid** — quarterly (+ pre-winter)  
+- **Air & cabin filters** — twice a year  
+- **Brake visual check** — twice a year  
+- **Fluids spot checks** (coolant, brake, PS, transmission) — seasonal  
+- **Registration / inspection** — annual reminder  
+- **Detail / wash + underbody rinse** — quarterly (bump in salted climates)
 
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-      padding: 3rem 0 2rem;
-    }
+**Sample cadence**
+- Jan 15 — Winter check: wipers, washer fluid, battery  
+- Mar 01 — Oil change  
+- Apr 15 — Tire rotation + brake visual  
+- Jun 01 — Air/Cabin filters  
+- Aug 01 — Oil change  
+- Oct 01 — Tire rotation + winter readiness  
+- Nov 15 — Winter fluids & wiper swap
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.4rem;
-      }
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      .hero-banner img {
-        object-fit: cover;
-      }
-    }
-  </style>
-</head>
+> Tip: we can later add **Warm Climate** and **Cold Climate** variants.
 
-<body>
+<hr class="lite" />
 
-  <!-- HERO BANNER -->
-  <div class="hero-banner">
-    <img src="{{ '/purchase-hero.png?v=2' | relative_url }}" alt="Car Care Hero Banner">
-  </div>
+## <a id="how-it-works"></a>How It Works
+1. Click **Subscribe (.ics)** above.  
+2. Choose **Subscribe** (recommended) or **Import** when prompted.  
+   - **Subscribe** → adds a toggleable, auto-updating calendar feed.  
+   - **Import** → copies static events into your main calendar.  
+3. Reminders appear automatically on all synced devices.
 
-  <!-- NAV MENU -->
-  <nav>
-    <a href="#included">What’s Included</a>
-    <a href="#how">How It Works</a>
-    <a href="#faq">FAQ</a>
-    <a href="#support">Support</a>
-    <a href="#more">More Calendars</a>
-  </nav>
+**Quick tips**
+- **Google Calendar:** Other calendars → *Add by URL* → paste link  
+- **Outlook:** *Add calendar → From Internet* → paste link  
+- **Apple Calendar:** *File → New Calendar Subscription*
 
-  <!-- MAIN CONTENT -->
-  <div class="container">
-    <h1>Thanks for your purchase! Subscribe to your Car Care calendar below. 🚗</h1>
-    <p>Keep your vehicle on schedule with smart reminders that land right in your calendar.</p>
+<hr class="lite" />
 
-    <div class="button-row">
-      <a href="#" class="btn btn-subscribe">
-        <span class="emoji">📅</span> Subscribe (.ics)
-      </a>
-      <a href="#how" class="btn btn-info">
-        <span class="emoji">ℹ️</span> How It Works
-      </a>
-    </div>
+## <a id="faq"></a>FAQ
+**Does this track mileage?**  
+This version is **time-based**, so anyone can use it. A mileage-aware edition may come later.
 
-    <p>
-      Works with Apple Calendar, Google Calendar, and Outlook.  
-      Each event includes a 1-day-before alert (you can edit or mute anytime).
-    </p>
-  </div>
+**Can I change reminder times?**  
+Yes — edit or mute alerts in your calendar app after subscribing.
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Life Calendars — All rights reserved.</p>
-    <p>This page was generated by GitHub Pages.</p>
-  </footer>
+**My inspection month is different.**  
+Duplicate or edit that event after subscribing, or request a localized version.
 
-</body>
-</html>
+<hr class="lite" />
+
+## <a id="support"></a>Support
+Questions or ideas? Email **lyfecalendars@gmail.com** — we love suggestions.
+
+<hr class="lite" />
+
+## <a id="more-calendars"></a>More Calendars
+Browse other Lyfe Calendars (info pages only):
+- 🏠 **Home Maintenance** — seasonal chores & safety checks → [/home](/home)  
+- ❤️ **Health Check-In** — dentist, physicals, labs, vaccines → [/health](/health)

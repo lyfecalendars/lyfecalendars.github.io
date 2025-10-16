@@ -3,27 +3,44 @@ title: Car Care
 layout: default
 ---
 
-<!-- =================== PAGE STYLES =================== -->
 <style>
-/* Hide the Cayman header on this page */
+/* Hide the Cayman header */
 .page-header { display:none !important; }
 
-/* Full-bleed hero: edge-to-edge, tall enough to fill the top area */
+/* HERO */
 .hero-bleed{
   width: 100vw;
-  height: clamp(220px, 38vh, 520px);   /* fills the top of the screen */
+  height: clamp(220px, 38vh, 520px);
   position: relative;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  background-image: url('{{ "/purchase-hero.png?v=310" | relative_url }}');
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;            /* show the entire image (no crop) */
-  background-color: #f5f7fa;           /* subtle page-matching backdrop */
+  background-size: contain;
+  background-color: #f5f7fa;
   max-width: none !important;
 }
 
-/* In-page nav */
+/* FOOTER HERO */
+.footer-bleed{
+  width: 100vw;
+  height: clamp(220px, 38vh, 520px);
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 3rem;
+  background-color: #F8F1DE; /* warm tone */
+  background-image: url('{{ "/purchase-footer.png?v=310" | relative_url }}');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  max-width: none !important;
+}
+
+/* NAV */
 .lc-nav{
   display:flex; gap:.75rem; justify-content:center;
   background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
@@ -34,7 +51,7 @@ layout: default
 .lc-nav a:hover{ text-decoration:underline; }
 .lc-nav span{ opacity:.5 }
 
-/* Buttons */
+/* BUTTONS */
 .lc-btns{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.9rem 0 1.25rem; }
 .lc-btn{
   display:inline-block; padding:.7rem 1rem; border-radius:10px;
@@ -42,7 +59,7 @@ layout: default
 }
 .lc-btn.secondary{ background:#0366d6; }
 
-/* Variant grid */
+/* VARIANT GRID */
 .variant-wrap{ margin:1rem 0 1.25rem; }
 .variant-grid{
   display:grid; grid-template-columns: repeat(4, minmax(160px,1fr));
@@ -65,12 +82,10 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 }
 </style>
 
-<!-- =================== HERO IMAGE (no overlay) =================== -->
-<div class="hero-bleed"
-     style="background-image:url('{{ "/purchase-hero.png?v=120" | relative_url }}');">
-</div>
+<!-- HERO -->
+<div class="hero-bleed"></div>
 
-<!-- =================== IN-PAGE MENU =================== -->
+<!-- NAV -->
 <div class="lc-nav" role="navigation" aria-label="Car Care sections">
   <a href="#whats-included">What’s Included</a>
   <span>•</span>
@@ -83,7 +98,6 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
   <a href="#more-calendars">More Calendars</a>
 </div>
 
-<!-- =================== MAIN CONTENT =================== -->
 ## Thanks for your purchase! Subscribe to your Car Care calendar below. 🚗
 Keep your vehicle on schedule with smart reminders that land right in your calendar.
 

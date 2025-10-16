@@ -3,28 +3,25 @@ title: Car Care
 layout: default
 ---
 
-<!-- ───────────── Hero Image (no text overlay) ───────────── -->
+<!-- ───────────── Hero (replace green banner) ───────────── -->
 <style>
+/* Use your hero image and hide the default title/tagline */
 .page-header {
   background: url('/purchase-hero.png?v=1') center/cover no-repeat !important;
   height: 260px;
 }
-
-/* Hide default title + subtitle */
 .page-header .project-name,
 .page-header .project-tagline {
   display: none !important;
 }
-</style>
 
-
-/* Navigation + buttons */
+/* Nav + buttons */
 .lc-nav{
   position: sticky; top: 0; z-index: 3;
   display:flex; gap:.75rem; justify-content:center;
   background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
   margin: 1rem auto 1.25rem; width:fit-content;
-  box-shadow:0 1px 0 rgba(0,0,0,.04);
+  box-shadow: 0 1px 0 rgba(0,0,0,.04);
 }
 .lc-nav a{ text-decoration:none; font-weight:600; }
 .lc-nav a:hover{ text-decoration:underline; }
@@ -37,6 +34,11 @@ layout: default
 .lc-btn.secondary{ background:#0366d6; }
 .lc-meta{ color:#586069; font-size:.95rem; }
 hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
+
+@media (max-width:720px){
+  .lc-nav{ border-radius:0; width:100%; }
+  .page-header{ height:220px; }
+}
 </style>
 
 <!-- ───────────── Top navigation (in-page anchors only) ───────────── -->
@@ -52,7 +54,7 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
   <a href="#more-calendars">More Calendars</a>
 </div>
 
-## Thanks for your purchase! Subscribe to your Car Care calendar below. 🚗  
+## Thanks for your purchase! Subscribe to your Car Care calendar below. 🚗
 Keep your vehicle on schedule with smart reminders that land right in your calendar.
 
 <div class="lc-btns">
@@ -67,13 +69,15 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 <hr class="lite" />
 
 ## <a id="whats-included"></a>What’s Included
+Time-based cadence that fits most daily drivers (no mileage tracking required):
+
 - **Oil change** — every 4 months  
 - **Tire rotation** — every 6 months  
 - **Battery & terminals check** — every 6 months  
 - **Wipers & washer fluid** — quarterly (+ pre-winter)  
 - **Air & cabin filters** — twice a year  
 - **Brake visual check** — twice a year  
-- **Fluid spot checks** — seasonal  
+- **Fluid spot checks** (coolant, brake, PS, trans as applicable) — seasonal  
 - **Registration / inspection** — annual reminder  
 - **Detail / wash + underbody rinse** — quarterly (bump in salted climates)
 
@@ -86,33 +90,34 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 - Oct 01 — Tire rotation + winter readiness  
 - Nov 15 — Winter fluids & wiper swap
 
-> Tip: Warm and cold-climate variants coming soon.
+> Tip: Warm- and cold-climate variants coming soon.
 
 <hr class="lite" />
 
 ## <a id="how-it-works"></a>How It Works
 1. Click **Subscribe (.ics)** above.  
-2. Choose “Subscribe” (best) or “Import” when prompted.  
-   - *Subscribe* → adds a **toggleable calendar** that auto-updates.  
-   - *Import* → copies events to your main calendar.  
-3. That’s it — reminders appear automatically.
+2. Your calendar app will offer to **Subscribe** (best) or **Import**.  
+   - **Subscribe** → adds a **toggleable calendar** that auto-updates.  
+   - **Import** → copies events into your main calendar.  
+3. Reminders appear automatically.
 
-**Quick tips:**  
-- **Google Calendar:** Other calendars → Add by URL → paste link  
-- **Outlook:** Add calendar → From Internet → paste link  
-- **Apple:** File → New Calendar Subscription
+**Quick tips**
+- **Google Calendar:** Other calendars → **Add by URL** → paste the link  
+- **Outlook:** **Add calendar → From Internet** → paste the link  
+- **Apple:** **File → New Calendar Subscription**
 
 <hr class="lite" />
 
 ## <a id="faq"></a>FAQ
+
 **Does this track mileage?**  
-This version is **time-based** so anyone can use it.
+This version is **time-based** so anyone can use it. Mileage-aware variant may come later.
 
 **Can I change reminder times?**  
-Yes. Edit or mute alerts after subscribing.
+Yes. Edit or mute alerts in your calendar app after subscribing.
 
 **My inspection month is different.**  
-Duplicate/adjust that event or request a localized variant.
+Duplicate/adjust that event after subscribing, or request a localized variant.
 
 <hr class="lite" />
 
@@ -122,5 +127,6 @@ Questions or ideas? Email **lyfecalendars@gmail.com** — we love suggestions.
 <hr class="lite" />
 
 ## <a id="more-calendars"></a>More Calendars
-- 🏠 [**Home Maintenance**](/home) — seasonal chores & safety checks  
-- ❤️ [**Health Check-In**](/health) — dentist, physicals, labs, vaccines
+Browse other calendars (info pages only):
+- 🏠 **Home Maintenance** — seasonal chores & safety checks → [/home](/home)  
+- ❤️ **Health Check-In** — dentist, physicals, labs, vaccines → [/health](/health)

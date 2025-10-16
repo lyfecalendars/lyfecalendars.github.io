@@ -5,73 +5,69 @@ layout: default
 
 <!-- =================== PAGE STYLES =================== -->
 <style>
-/* Hide the built-in Cayman header for this page */
-.page-header { display: none !important; }
+/* Hide the Cayman header on this page */
+.page-header { display:none !important; }
 
-/* Full-bleed hero banner (edge-to-edge), 200px tall */
-.hero-bleed {
+/* Full-bleed hero: edge-to-edge, tall enough to fill the top area */
+.hero-bleed{
   width: 100vw;
-  height: 200px;
+  height: clamp(220px, 38vh, 520px);   /* fills the top of the screen */
   position: relative;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;   /* show full image without crop */
-  background-color: #ffffff;
+  background-size: contain;            /* show the entire image (no crop) */
+  background-color: #f5f7fa;           /* subtle page-matching backdrop */
   max-width: none !important;
 }
 
-/* Gradient fallback (matches banner tones) */
-.hero-bleed::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, #b0d0e8, #f5eec9);
-  opacity: 0.35;
+/* In-page nav */
+.lc-nav{
+  display:flex; gap:.75rem; justify-content:center;
+  background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
+  margin: 1rem auto 1.25rem; width:fit-content;
+  box-shadow:0 1px 0 rgba(0,0,0,.04);
 }
-
-/* Navigation bar */
-.lc-nav {
-  display: flex;
-  gap: .75rem;
-  justify-content: center;
-  background: #f6f8fa;
-  padding: .6rem .9rem;
-  border-radius: 10px;
-  margin: 1rem auto 1.25rem;
-  width: fit-content;
-  box-shadow: 0 1px 0 rgba(0,0,0,.04);
-}
-.lc-nav a { text-decoration: none; font-weight: 600; color: #0b5bd3; }
-.lc-nav a:hover { text-decoration: underline; }
-.lc-nav span { opacity: .5; }
+.lc-nav a{ text-decoration:none; font-weight:600; color:#0b5bd3; }
+.lc-nav a:hover{ text-decoration:underline; }
+.lc-nav span{ opacity:.5 }
 
 /* Buttons */
-.lc-btns { display: flex; gap: .6rem; flex-wrap: wrap; margin: .9rem 0 1.25rem; }
-.lc-btn {
-  display: inline-block;
-  padding: .7rem 1rem;
-  border-radius: 10px;
-  background: #2ea44f;
-  color: #fff !important;
-  font-weight: 700;
-  text-decoration: none;
+.lc-btns{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.9rem 0 1.25rem; }
+.lc-btn{
+  display:inline-block; padding:.7rem 1rem; border-radius:10px;
+  background:#2ea44f; color:#fff !important; font-weight:700; text-decoration:none;
 }
-.lc-btn.secondary { background: #0366d6; }
+.lc-btn.secondary{ background:#0366d6; }
 
-.lc-meta { color: #586069; font-size: .95rem; }
-hr.lite { border: 0; border-top: 1px solid #eaecef; margin: 1.25rem 0; }
+/* Variant grid */
+.variant-wrap{ margin:1rem 0 1.25rem; }
+.variant-grid{
+  display:grid; grid-template-columns: repeat(4, minmax(160px,1fr));
+  gap:.6rem;
+}
+.variant-btn{
+  display:block; text-align:center; padding:.7rem 1rem; border-radius:10px;
+  background:#111827; color:#fff; font-weight:700; text-decoration:none;
+}
+.variant-btn:hover{ filter:brightness(1.08); }
 
-@media (max-width: 720px) {
-  .lc-nav { border-radius: 0; width: 100%; }
+.lc-meta{ color:#586069; font-size:.95rem; }
+hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
+
+@media (max-width: 960px){
+  .variant-grid{ grid-template-columns: repeat(2, minmax(160px,1fr)); }
+}
+@media (max-width: 560px){
+  .variant-grid{ grid-template-columns: 1fr; }
 }
 </style>
 
-<!-- =================== HERO IMAGE =================== -->
+<!-- =================== HERO IMAGE (no overlay) =================== -->
 <div class="hero-bleed"
-     style="background-image:url('{{ "/purchase-hero.png?v=100" | relative_url }}');">
+     style="background-image:url('{{ "/purchase-hero.png?v=120" | relative_url }}');">
 </div>
 
 <!-- =================== IN-PAGE MENU =================== -->
@@ -92,8 +88,8 @@ hr.lite { border: 0; border-top: 1px solid #eaecef; margin: 1.25rem 0; }
 Keep your vehicle on schedule with smart reminders that land right in your calendar.
 
 <div class="lc-btns">
-  <a class="lc-btn" href="/Car_Care.ics">📅 Subscribe (.ics)</a>
-  <a class="lc-btn secondary" href="#how-it-works">ℹ️ How It Works</a>
+  <a class="lc-btn secondary" href="#variants">Choose Variant</a>
+  <a class="lc-btn" href="#how-it-works">How It Works</a>
 </div>
 
 <div class="lc-meta">
@@ -102,18 +98,28 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 
 <hr class="lite" />
 
-## <a id="whats-included"></a>What’s Included
-A curated yearly rhythm that fits most daily drivers — no mileage tracking required.
+## <a id="variants"></a>Pick your variant
+<div class="variant-wrap">
+  <div class="variant-grid">
+    <a class="variant-btn" href="/Car_Warm.ics">🚗 Car — Warm Climate</a>
+    <a class="variant-btn" href="/Car_Cold.ics">🚗 Car — Cold Climate</a>
+    <a class="variant-btn" href="/Truck_Warm.ics">🚚 Truck — Warm Climate</a>
+    <a class="variant-btn" href="/Truck_Cold.ics">🚚 Truck — Cold Climate</a>
+  </div>
+</div>
 
-- **Oil change** — every 4 months  
-- **Tire rotation** — every 6 months  
-- **Battery & terminals check** — every 6 months  
-- **Wipers & washer fluid** — quarterly (+ pre-winter)  
-- **Air & cabin filters** — twice a year  
-- **Brake visual check** — twice a year  
-- **Fluids spot checks** (coolant, brake, PS, transmission) — seasonal  
-- **Registration / inspection** — annual reminder  
-- **Detail / wash + underbody rinse** — quarterly (bump in salted climates)
+<hr class="lite" />
+
+## <a id="whats-included"></a>What’s Included
+- Oil change — every 4 months  
+- Tire rotation — every 6 months  
+- Battery & terminals check — every 6 months  
+- Wipers & washer fluid — quarterly (+ pre-winter)  
+- Air & cabin filters — twice a year  
+- Brake visual check — twice a year  
+- Fluids spot checks — seasonal  
+- Registration / inspection — annual reminder  
+- Detail / wash + underbody rinse — quarterly (bump in salted climates)
 
 **Sample cadence**
 - Jan 15 — Winter check: wipers, washer fluid, battery  
@@ -124,15 +130,13 @@ A curated yearly rhythm that fits most daily drivers — no mileage tracking req
 - Oct 01 — Tire rotation + winter readiness  
 - Nov 15 — Winter fluids & wiper swap
 
-> Tip: we can later add **Warm Climate** and **Cold Climate** variants.
-
 <hr class="lite" />
 
 ## <a id="how-it-works"></a>How It Works
-1. Click **Subscribe (.ics)** above.  
+1. Click a **variant** above to subscribe.  
 2. Choose **Subscribe** (recommended) or **Import** when prompted.  
-   - **Subscribe** → adds a toggleable, auto-updating calendar feed.  
-   - **Import** → copies static events into your main calendar.  
+   - *Subscribe* → adds a toggleable, auto-updating calendar feed.  
+   - *Import* → copies static events into your main calendar.  
 3. Reminders appear automatically on all synced devices.
 
 **Quick tips**
@@ -144,10 +148,10 @@ A curated yearly rhythm that fits most daily drivers — no mileage tracking req
 
 ## <a id="faq"></a>FAQ
 **Does this track mileage?**  
-This version is **time-based**, so anyone can use it. A mileage-aware edition may come later.
+This version is time-based.  
 
 **Can I change reminder times?**  
-Yes — edit or mute alerts in your calendar app after subscribing.
+Yes—edit or mute alerts in your calendar app after subscribing.
 
 **My inspection month is different.**  
 Duplicate or edit that event after subscribing, or request a localized version.
@@ -155,11 +159,10 @@ Duplicate or edit that event after subscribing, or request a localized version.
 <hr class="lite" />
 
 ## <a id="support"></a>Support
-Questions or ideas? Email **lyfecalendars@gmail.com** — we love suggestions.
+Questions or ideas? Email **lyfecalendars@gmail.com**.
 
 <hr class="lite" />
 
 ## <a id="more-calendars"></a>More Calendars
-Browse other Lyfe Calendars (info pages only):
-- 🏠 **Home Maintenance** — seasonal chores & safety checks → [/home](/home)  
-- ❤️ **Health Check-In** — dentist, physicals, labs, vaccines → [/health](/health)
+- 🏠 **Home Maintenance** → [/home](/home)  
+- ❤️ **Health Check-In** → [/health](/health)

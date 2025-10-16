@@ -3,22 +3,31 @@ title: Car Care
 layout: default
 ---
 
-<!-- ─────────── BYPASS CAYMAN HEADER ─────────── -->
 <style>
-/* Hide the theme’s header completely on this page */
+/* 1) Hide Cayman’s built-in header on this page */
 .page-header{ display:none !important; }
 
-/* Our custom hero (exactly 200px tall, fits full image) */
-.hero {
+/* 2) Full-bleed hero: 100vw width, exactly 200px tall */
+.hero-bleed{
+  width: 100vw;
   height: 200px;
-  background: url('/purchase-hero.png?v=7') center/contain no-repeat;
-  background-color: #fff;   /* gentle edge color if aspect leaves bars */
-  margin: 0; padding: 0; border: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: #fff; /* edge color when image doesn't fill */
+}
+.hero-bleed img{
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;      /* show the whole image (no crop) */
+  object-position: center;
 }
 
-/* Nav + buttons (unchanged) */
+/* 3) Simple, non-overlapping nav */
 .lc-nav{
-  position: sticky; top: 0; z-index: 3;
   display:flex; gap:.75rem; justify-content:center;
   background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
   margin: 1rem auto 1.25rem; width:fit-content;
@@ -27,6 +36,7 @@ layout: default
 .lc-nav a{ text-decoration:none; font-weight:600; }
 .lc-nav a:hover{ text-decoration:underline; }
 .lc-nav span{ opacity:.5 }
+
 .lc-btns{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.9rem 0 1.25rem; }
 .lc-btn{
   display:inline-block; padding:.7rem 1rem; border-radius:10px;
@@ -41,10 +51,12 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 }
 </style>
 
-<!-- Our hero image (replaces Cayman’s header) -->
-<div class="hero"></div>
+<!-- 4) Our full-bleed hero -->
+<div class="hero-bleed">
+  <img src="/purchase-hero.png?v=10" alt="">
+</div>
 
-<!-- In-page menu -->
+<!-- 5) In-page menu (now safely below the hero) -->
 <div class="lc-nav" role="navigation" aria-label="Car Care sections">
   <a href="#whats-included">What’s Included</a>
   <span>•</span>
@@ -97,9 +109,9 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 
 ## <a id="how-it-works"></a>How It Works
 1. Click **Subscribe (.ics)** above.  
-2. Choose **Subscribe** (best) or **Import**.  
+2. Choose **Subscribe** (best) or **Import** when prompted.  
    - **Subscribe** → adds a **toggleable calendar** that auto-updates.  
-   - **Import** → copies events into your main calendar.  
+   - **Import** → copies events to your main calendar.  
 3. Reminders appear automatically.
 
 **Quick tips**

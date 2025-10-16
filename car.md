@@ -6,13 +6,17 @@ layout: default
 <!-- ───────────── Hero Image (no text overlay) ───────────── -->
 <style>
 .page-header {
-  background: url('/purchase-hero.jpg') center/cover no-repeat !important;
+  background: url('/purchase-hero.png?v=1') center/cover no-repeat !important;
   height: 260px;
 }
+
+/* Hide default title + subtitle */
 .page-header .project-name,
 .page-header .project-tagline {
   display: none !important;
 }
+</style>
+
 
 /* Navigation + buttons */
 .lc-nav{

@@ -3,44 +3,78 @@ title: Home Maintenance
 layout: default
 ---
 
-<!-- ───────────── Hero (replace Cayman banner) ───────────── -->
+<!-- =================== PAGE STYLES =================== -->
 <style>
-.page-header {
-  background: url('/purchase-hero-home.png?v=1') center/cover no-repeat !important;
-  height: 200px; /* 200–220px looks best */
-}
-.page-header .project-name,
-.page-header .project-tagline {
-  display: none !important;
+/* Hide the Cayman header on this page */
+.page-header { display:none !important; }
+
+/* Full-bleed hero: edge-to-edge, tall enough to fill the top area */
+.hero-bleed{
+  width: 100vw;
+  height: clamp(220px, 38vh, 520px);
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;        /* show entire image (no crop) */
+  background-color: #f5f7fa;
+  max-width: none !important;
 }
 
-/* Nav + buttons (same style as Car) */
+/* In-page nav */
 .lc-nav{
-  position: sticky; top: 0; z-index: 3;
   display:flex; gap:.75rem; justify-content:center;
   background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
   margin: 1rem auto 1.25rem; width:fit-content;
-  box-shadow: 0 1px 0 rgba(0,0,0,.04);
+  box-shadow:0 1px 0 rgba(0,0,0,.04);
 }
-.lc-nav a{ text-decoration:none; font-weight:600; }
+.lc-nav a{ text-decoration:none; font-weight:600; color:#0b5bd3; }
 .lc-nav a:hover{ text-decoration:underline; }
 .lc-nav span{ opacity:.5 }
+
+/* Buttons */
 .lc-btns{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.9rem 0 1.25rem; }
 .lc-btn{
   display:inline-block; padding:.7rem 1rem; border-radius:10px;
   background:#2ea44f; color:#fff !important; font-weight:700; text-decoration:none;
 }
 .lc-btn.secondary{ background:#0366d6; }
+
+/* Variant layout */
+.variant-wrap{ margin:1rem 0 1.25rem; }
+.variant-columns{
+  display:grid; grid-template-columns: 1fr 1fr; gap:1rem;
+}
+.variant-card{
+  background:#0f172a; color:#fff; border-radius:12px; padding:1rem;
+  box-shadow:0 4px 14px rgba(2,6,23,.15);
+}
+.variant-card h3{ margin:.25rem 0 1rem; font-size:1.15rem; }
+.variant-grid{
+  display:grid; grid-template-columns: 1fr; gap:.6rem;
+}
+.variant-btn{
+  display:block; text-align:center; padding:.7rem 1rem; border-radius:10px;
+  background:#111827; color:#fff; font-weight:700; text-decoration:none;
+}
+.variant-btn:hover{ filter:brightness(1.08); }
+
 .lc-meta{ color:#586069; font-size:.95rem; }
 hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 
-@media (max-width:720px){
-  .lc-nav{ border-radius:0; width:100%; }
-  .page-header{ height:180px; }
+@media (max-width: 900px){
+  .variant-columns{ grid-template-columns: 1fr; }
 }
 </style>
 
-<!-- ───────────── In-page menu ───────────── -->
+<!-- =================== HERO IMAGE (no overlay) =================== -->
+<div class="hero-bleed"
+     style="background-image:url('{{ "/home-hero.png?v=1" | relative_url }}');">
+</div>
+
+<!-- =================== IN-PAGE MENU =================== -->
 <div class="lc-nav" role="navigation" aria-label="Home Maintenance sections">
   <a href="#whats-included">What’s Included</a>
   <span>•</span>
@@ -53,13 +87,13 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
   <a href="#more-calendars">More Calendars</a>
 </div>
 
+<!-- =================== MAIN CONTENT =================== -->
 ## Thanks for your purchase! Subscribe to your Home Maintenance calendar below. 🏠
-Year-round reminders for seasonal chores and safety checks—right in your calendar.
+Stay on top of seasonal chores and safety checks with reminders that land right in your calendar.
 
 <div class="lc-btns">
-  <!-- Point to your canonical feed filename -->
-  <a class="lc-btn" href="/Home_Maintenance.ics">📅 Subscribe (.ics)</a>
-  <a class="lc-btn secondary" href="#how-it-works">🔍 How It Works</a>
+  <a class="lc-btn secondary" href="#variants">Choose Variant</a>
+  <a class="lc-btn" href="#how-it-works">How It Works</a>
 </div>
 
 <div class="lc-meta">
@@ -68,62 +102,92 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 
 <hr class="lite" />
 
-## <a id="whats-included"></a>What’s Included
-A practical, time-based cadence covering the big stuff most homes need:
+## <a id="variants"></a>Pick your variant
 
-- **Monthly:** HVAC filter swap, sink/disposal clean, softener salt check  
-- **Quarterly:** Smoke/CO detector test, GFCI test, refrigerator coil clean, vacuum dryer vent cover  
-- **Seasonal:**  
-  - **Spring:** Gutter/roof check, exterior hose bibs on, AC test run  
-  - **Summer:** Deck/railing check, lawn irrigation test, pest perimeter  
-  - **Fall:** Gutter clean, furnace filter, hose bibs off & drain, winterize outdoor equipment  
-  - **Winter:** Sump pump test, ice dam inspection, walkways/salt prep  
-- **Annual:** Water heater flush (sediment), fireplace/chimney check, caulk/weather-seal, fridge water filter, emergency kit refresh
+<div class="variant-wrap">
+  <div class="variant-columns">
+
+    <div class="variant-card">
+      <h3>🌞 Warm Climate</h3>
+      <div class="variant-grid">
+        <a class="variant-btn" href="/Home_SingleFamily_Warm.ics">Single-Family — Warm</a>
+        <a class="variant-btn" href="/Home_Townhome_Warm.ics">Townhome — Warm</a>
+        <a class="variant-btn" href="/Home_Apartment_Warm.ics">Apartment — Warm</a>
+      </div>
+    </div>
+
+    <div class="variant-card">
+      <h3>❄️ Cold Climate</h3>
+      <div class="variant-grid">
+        <a class="variant-btn" href="/Home_SingleFamily_Cold.ics">Single-Family — Cold</a>
+        <a class="variant-btn" href="/Home_Townhome_Cold.ics">Townhome — Cold</a>
+        <a class="variant-btn" href="/Home_Apartment_Cold.ics">Apartment — Cold</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="lite" />
+
+## <a id="whats-included"></a>What’s Included
+Core annual rhythm tailored for most homes (adjust as you like after subscribing):
+
+- Smoke/CO detector tests & battery swap — semiannual  
+- HVAC filter — every 2–3 months (adjust for pets/allergies)  
+- HVAC service — spring & fall checks  
+- Range hood & bath fans — clean quarterly  
+- Water heater flush — annual  
+- Dryer vent & lint trap deep clean — semiannual  
+- Refrigerator coils & door gaskets — semiannual  
+- GFCI test — quarterly  
+- Plumbing: leaks, under-sink traps, toilet flappers — quarterly  
+- Windows & weatherstripping check — spring/fall  
+- Exterior: gutters & downspouts — spring/fall  
+- Exterior: foundation, grading, and caulking — annual  
+- Safety kit refresh (extinguishers, first-aid) — annual  
+- Local requirements (e.g., furnace filters, HOA checks) — as needed
 
 **Sample cadence**
-- Jan — Sump pump test; detector test  
-- Mar — Gutter/roof check; AC test run  
-- Jun — Deck/rail check; pest perimeter  
-- Sep — Gutter clean; hose bibs off & drain  
-- Nov — Water heater flush; winter safety check
-
-> Tip: Condo/apt variant and “Warm Climate” version coming soon.
+- Jan — Detector test, GFCI test, filter change  
+- Mar — Gutters (post-winter), exterior caulking, water heater flush  
+- May — AC service, windows & screens  
+- Aug — Filter change, dryer vent clean  
+- Oct — Heat service, gutters (pre-winter), safety kit refresh
 
 <hr class="lite" />
 
 ## <a id="how-it-works"></a>How It Works
-1. Click **Subscribe (.ics)** above.  
-2. Choose **Subscribe** (best) or **Import** when prompted.  
-   - **Subscribe** → adds a **toggleable calendar** that auto-updates.  
-   - **Import** → copies events to your main calendar.  
-3. Reminders appear automatically.
+1. Click a **variant** above to subscribe.  
+2. Choose **Subscribe** (recommended) or **Import** when prompted.  
+   - *Subscribe* → adds a toggleable, auto-updating calendar feed.  
+   - *Import* → copies static events into your main calendar.  
+3. Edit reminder times or mute alerts any time in your calendar app.
 
-**Quick tips**  
-- **Google Calendar:** Other calendars → **Add by URL** → paste the link  
-- **Outlook:** **Add calendar → From Internet** → paste the link  
-- **Apple:** **File → New Calendar Subscription**
+**Quick tips**
+- **Google Calendar:** Other calendars → *Add by URL* → paste link  
+- **Outlook:** *Add calendar → From Internet* → paste link  
+- **Apple Calendar:** *File → New Calendar Subscription*
 
 <hr class="lite" />
 
 ## <a id="faq"></a>FAQ
+**Can I add my own tasks?**  
+Yes—after subscribing, duplicate events or create your own alongside this calendar.
 
-**Can I change reminder times?**  
-Yes—edit or mute alerts in your calendar app after subscribing.
+**Apartment vs Townhome vs Single-Family—what’s different?**  
+Exterior and system checks vary slightly. Apartments emphasize interior/safety items; single-family includes exterior items like gutters and grading.
 
-**My home doesn’t have some items (e.g., chimney).**  
-Delete that event after subscribing; we’ll offer variants to match different homes.
-
-**Will this update next year?**  
-Yes—if you stay subscribed, we can improve timing and copy without changing your link.
+**Warm vs Cold climate—what’s different?**  
+Timing and frequency for HVAC, gutters, exterior sealing, and winterization steps.
 
 <hr class="lite" />
 
 ## <a id="support"></a>Support
-Questions or ideas? Email **lyfecalendars@gmail.com** — we love suggestions.
+Questions or ideas? Email **lyfecalendars@gmail.com**.
 
 <hr class="lite" />
 
 ## <a id="more-calendars"></a>More Calendars
-Browse other calendars (info pages only):
-- 🚗 **Car Care** — maintenance, registration, seasonal checks → [/car](/car)  
-- ❤️ **Health Check-In** — dentist, physicals, labs, vaccines → [/health](/health)
+- 🚗 **Car Care** → [/car](/car)  
+- ❤️ **Health Check-In** → [/health](/health)

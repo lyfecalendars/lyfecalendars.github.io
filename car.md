@@ -2,6 +2,19 @@
 title: Car Care
 layout: default
 ---
+<style>
+/* Force the hero to show the entire 1710×200 image */
+.page-header{
+  background: url('/purchase-hero.png?v=4') center/contain no-repeat !important;
+  height: 200px !important;
+  background-color: #ffffff; /* fallback edges if needed */
+}
+/* Hide default title/subtitle over the hero */
+.page-header .project-name,
+.page-header .project-tagline{
+  display: none !important;
+}
+</style>
 
 <!-- ───────────── Hero (replace green banner) ───────────── -->
 <style>

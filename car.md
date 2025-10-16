@@ -4,11 +4,11 @@ layout: default
 ---
 
 <style>
-/* Hide the theme’s header so we control the hero entirely */
-.page-header{ display:none !important; }
+/* Hide Cayman's header so it can't interfere */
+.page-header { display:none !important; }
 
-/* Full-bleed hero: true 100% width, exactly 200px tall, no crop */
-.hero-bleed{
+/* Full-bleed hero: exactly 200px tall, shows entire image (no crop) */
+.hero-bleed {
   width: 100vw;
   height: 200px;
   position: relative;
@@ -16,17 +16,13 @@ layout: default
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background: #fff;
-}
-.hero-bleed img{
-  display: block;
-  width: 100%;
-  height: 200px;
-  object-fit: contain;     /* show the whole image */
-  object-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;      /* show whole image */
+  background-color: #fff;        /* subtle edge color */
 }
 
-/* Clean nav (non-sticky for now to avoid any overlap) */
+/* Simple nav */
 .lc-nav{
   display:flex; gap:.75rem; justify-content:center;
   background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
@@ -47,9 +43,9 @@ layout: default
 hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 </style>
 
-<!-- HERO: UPDATE src TO YOUR REAL FILE NAME -->
-<div class="hero-bleed">
-  <img src="/purchase-hero-1710x200.png?v=1" alt="Car Care banner">
+<!-- Full-bleed hero (UPDATE the filename if needed) -->
+<div class="hero-bleed"
+     style="background-image:url('{{ '/purchase-hero.png?v=12' | relative_url }}');">
 </div>
 
 <div class="lc-nav" role="navigation" aria-label="Car Care sections">
@@ -104,7 +100,7 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 1. Click **Subscribe (.ics)** above.  
 2. Choose **Subscribe** (best) or **Import** when prompted.  
    - **Subscribe** → adds a **toggleable calendar** that auto-updates.  
-   - **Import** → copies events into your main calendar.  
+   - **Import** → copies events to your main calendar.  
 3. Reminders appear automatically.
 
 **Quick tips**

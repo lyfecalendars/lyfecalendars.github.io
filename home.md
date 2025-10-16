@@ -11,15 +11,15 @@ layout: default
 /* Full-bleed hero: edge-to-edge, tall enough to fill the top area */
 .hero-bleed{
   width: 100vw;
-  height: clamp(220px, 38vh, 520px);
+  height: clamp(220px, 38vh, 520px);   /* fills the top of the screen */
   position: relative;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: contain;        /* show entire image (no crop) */
-  background-color: #f5f7fa;
+  background-size: contain;            /* show the entire image (no crop) */
+  background-color: #f5f7fa;           /* subtle page-matching backdrop */
   max-width: none !important;
 }
 
@@ -42,18 +42,11 @@ layout: default
 }
 .lc-btn.secondary{ background:#0366d6; }
 
-/* Variant layout */
+/* Variant grid */
 .variant-wrap{ margin:1rem 0 1.25rem; }
-.variant-columns{
-  display:grid; grid-template-columns: 1fr 1fr; gap:1rem;
-}
-.variant-card{
-  background:#0f172a; color:#fff; border-radius:12px; padding:1rem;
-  box-shadow:0 4px 14px rgba(2,6,23,.15);
-}
-.variant-card h3{ margin:.25rem 0 1rem; font-size:1.15rem; }
 .variant-grid{
-  display:grid; grid-template-columns: 1fr; gap:.6rem;
+  display:grid; grid-template-columns: repeat(4, minmax(160px,1fr));
+  gap:.6rem;
 }
 .variant-btn{
   display:block; text-align:center; padding:.7rem 1rem; border-radius:10px;
@@ -64,10 +57,18 @@ layout: default
 .lc-meta{ color:#586069; font-size:.95rem; }
 hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 
-@media (max-width: 900px){
-  .variant-columns{ grid-template-columns: 1fr; }
+@media (max-width: 960px){
+  .variant-grid{ grid-template-columns: repeat(2, minmax(160px,1fr)); }
+}
+@media (max-width: 560px){
+  .variant-grid{ grid-template-columns: 1fr; }
 }
 </style>
+
+<!-- =================== HERO IMAGE (no overlay) =================== -->
+<div class="hero-bleed"
+     style="background-image:url('{{ "/purchase-hero.png?v=120" | relative_url }}');">
+</div>
 
 <!-- =================== HERO IMAGE (no overlay) =================== -->
 <div class="hero-bleed"

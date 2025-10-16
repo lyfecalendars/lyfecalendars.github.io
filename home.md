@@ -7,8 +7,9 @@ layout: default
 /* Hide Cayman header */
 .page-header { display:none !important; }
 
-/* HERO IMAGE (identical behavior to Car page) */
-.hero-bleed{
+/* HERO + FOOTER IMAGE */
+.hero-bleed,
+.footer-bleed {
   width: 100vw;
   height: clamp(220px, 38vh, 520px);
   position: relative;
@@ -22,8 +23,14 @@ layout: default
   max-width: none !important;
 }
 
-/* In-page nav */
-.lc-nav{
+/* FOOTER positioning */
+.footer-bleed {
+  background-position: center bottom;
+  margin-top: 3rem;
+}
+
+/* NAV BAR */
+.lc-nav {
   display:flex;
   gap:.75rem;
   justify-content:center;
@@ -34,13 +41,18 @@ layout: default
   width:fit-content;
   box-shadow:0 1px 0 rgba(0,0,0,.04);
 }
-.lc-nav a{ text-decoration:none; font-weight:600; color:#0b5bd3; }
-.lc-nav a:hover{ text-decoration:underline; }
-.lc-nav span{ opacity:.5 }
+.lc-nav a { text-decoration:none; font-weight:600; color:#0b5bd3; }
+.lc-nav a:hover { text-decoration:underline; }
+.lc-nav span { opacity:.5 }
 
-/* Buttons */
-.lc-btns{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.9rem 0 1.25rem; }
-.lc-btn{
+/* BUTTONS */
+.lc-btns {
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap;
+  margin:.9rem 0 1.25rem;
+}
+.lc-btn {
   display:inline-block;
   padding:.7rem 1rem;
   border-radius:10px;
@@ -49,21 +61,28 @@ layout: default
   font-weight:700;
   text-decoration:none;
 }
-.lc-btn.secondary{ background:#0366d6; }
+.lc-btn.secondary { background:#0366d6; }
 
-/* Variant section */
-.variant-wrap{ margin:1rem 0 1.25rem; }
-.variant-columns{ display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
-.variant-card{
+/* VARIANT SECTION */
+.variant-wrap { margin:1rem 0 1.25rem; }
+.variant-columns {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+}
+.variant-card {
   background:#0f172a;
   color:#fff;
   border-radius:12px;
   padding:1rem;
   box-shadow:0 4px 14px rgba(2,6,23,.15);
 }
-.variant-card h3{ margin:.25rem 0 1rem; font-size:1.15rem; }
-.variant-grid{ display:grid; grid-template-columns: 1fr; gap:.6rem; }
-.variant-btn{
+.variant-card h3 {
+  margin:.25rem 0 1rem;
+  font-size:1.15rem;
+}
+.variant-grid { display:grid; gap:.6rem; }
+.variant-btn {
   display:block;
   text-align:center;
   padding:.7rem 1rem;
@@ -73,19 +92,19 @@ layout: default
   font-weight:700;
   text-decoration:none;
 }
-.variant-btn:hover{ filter:brightness(1.08); }
+.variant-btn:hover { filter:brightness(1.08); }
 
-.lc-meta{ color:#586069; font-size:.95rem; }
-hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
+.lc-meta { color:#586069; font-size:.95rem; }
+hr.lite { border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 
 @media (max-width: 900px){
-  .variant-columns{ grid-template-columns: 1fr; }
+  .variant-columns { grid-template-columns: 1fr; }
 }
 </style>
 
 <!-- HERO IMAGE -->
 <div class="hero-bleed"
-     style="background-image:url('{{ "/purchase-hero.png?v=200" | relative_url }}');">
+     style="background-image:url('{{ "/purchase-hero.png?v=300" | relative_url }}');">
 </div>
 
 <!-- NAVIGATION BAR -->
@@ -199,3 +218,12 @@ Questions or feedback?
 ## <a id="more-calendars"></a>More Calendars
 - 🚗 **Car Care** → [/car](/car)  
 - ❤️ **Health Check-In** → [/health](/health)
+
+<!-- FOOTER HERO -->
+<div class="footer-bleed"
+     style="background-image:url('{{ "/purchase-footer.png?v=300" | relative_url }}');">
+</div>
+
+<p style="text-align:center; color:#6a737d; font-size:.9rem; margin-top:.5rem;">
+© {{ 'now' | date: '%Y' }} LyfeCalendars. All rights reserved.
+</p>

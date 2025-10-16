@@ -4,10 +4,10 @@ layout: default
 ---
 
 <style>
-/* Hide the theme’s header so we control the hero entirely */
+/* 1) Hide Cayman’s built-in header on this page */
 .page-header{ display:none !important; }
 
-/* Full-bleed hero: true 100% width, exactly 200px tall, no crop */
+/* 2) Full-bleed hero: 100vw width, exactly 200px tall */
 .hero-bleed{
   width: 100vw;
   height: 200px;
@@ -16,17 +16,17 @@ layout: default
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  background: #fff;
+  background: #fff; /* edge color when image doesn't fill */
 }
 .hero-bleed img{
   display: block;
   width: 100%;
   height: 200px;
-  object-fit: contain;     /* show the whole image */
+  object-fit: contain;      /* show the whole image (no crop) */
   object-position: center;
 }
 
-/* Clean nav (non-sticky for now to avoid any overlap) */
+/* 3) Simple, non-overlapping nav */
 .lc-nav{
   display:flex; gap:.75rem; justify-content:center;
   background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
@@ -45,13 +45,18 @@ layout: default
 .lc-btn.secondary{ background:#0366d6; }
 .lc-meta{ color:#586069; font-size:.95rem; }
 hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
+
+@media (max-width:720px){
+  .lc-nav{ border-radius:0; width:100%; }
+}
 </style>
 
-<!-- HERO: UPDATE src TO YOUR REAL FILE NAME -->
+<!-- 4) Our full-bleed hero -->
 <div class="hero-bleed">
-  <img src="/purchase-hero-1710x200.png?v=1" alt="Car Care banner">
+  <img src="/purchase-hero.png?v=10" alt="">
 </div>
 
+<!-- 5) In-page menu (now safely below the hero) -->
 <div class="lc-nav" role="navigation" aria-label="Car Care sections">
   <a href="#whats-included">What’s Included</a>
   <span>•</span>
@@ -98,13 +103,15 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 - Oct 01 — Tire rotation + winter readiness  
 - Nov 15 — Winter fluids & wiper swap
 
+> Tip: Warm- and cold-climate variants coming soon.
+
 <hr class="lite" />
 
 ## <a id="how-it-works"></a>How It Works
 1. Click **Subscribe (.ics)** above.  
 2. Choose **Subscribe** (best) or **Import** when prompted.  
    - **Subscribe** → adds a **toggleable calendar** that auto-updates.  
-   - **Import** → copies events into your main calendar.  
+   - **Import** → copies events to your main calendar.  
 3. Reminders appear automatically.
 
 **Quick tips**

@@ -1,2 +1,51 @@
+# ===============================
+# LyfeCalendars site configuration
+# ===============================
+
+title: "📅 LyfeCalendars"
+description: "Smart, effortless calendar subscriptions for every part of life."
 theme: jekyll-theme-cayman
-title: LyfeCalendars
+markdown: GFM
+
+# Optional: if you want pretty permalinks for subpages
+permalink: pretty
+
+# Build settings
+plugins:
+  - jekyll-seo-tag
+
+# SEO & Social sharing
+seo:
+  type: "website"
+  name: "LyfeCalendars"
+  description: "Smart, effortless calendar subscriptions for every part of life."
+  image: "/purchase-hero.png"
+
+# GitHub Pages options
+github:
+  is_project_page: true
+  show_downloads: false
+
+# Exclude these from being published to the live site
+exclude:
+  - README.md
+  - LICENSE
+  - "*.txt"
+  - "*.psd"
+  - "*.xcf"
+
+# Future favicon support
+# To add an emoji favicon dynamically, create /_includes/head.html and insert:
+# <script>
+#   const emoji = "📅";
+#   const canvas = document.createElement("canvas");
+#   canvas.width = 64;
+#   canvas.height = 64;
+#   const ctx = canvas.getContext("2d");
+#   ctx.font = "48px serif";
+#   ctx.fillText(emoji, 8, 48);
+#   const link = document.createElement("link");
+#   link.rel = "icon";
+#   link.href = canvas.toDataURL();
+#   document.head.appendChild(link);
+# </script>

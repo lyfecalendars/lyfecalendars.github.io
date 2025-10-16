@@ -1,24 +1,189 @@
-<style>
-/* Hide Cayman's built-in header */
-.page-header{ display:none !important; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Care Calendar – Life Calendars</title>
 
-/* Full-bleed hero: breaks out of the narrow column to span the viewport */
-.hero-bleed{
-  width: 100vw;             /* full browser width */
-  height: 200px;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;       /* escape the container */
-  margin-right: -50vw;
-  background: #fff;         /* edge color when aspect leaves bars */
-  background-image: url('/purchase-hero.png?v=20');  /* <- your file */
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; /* show the ENTIRE image (no cropping) */
-  max-width: none !important;  /* ignore any theme constraints */
-}
-</style>
+  <!-- Theme & Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #222;
+    }
 
-<!-- FULL-BLEED HERO -->
-<div class="hero-bleed"></div>
+    /* ================================
+       HERO BANNER
+    ================================= */
+    .hero-banner {
+      width: 100%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #b7d0e7, #dfe8f3); /* soft sky gradient */
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      object-position: center top;
+    }
+
+    /* ================================
+       NAVIGATION
+    ================================= */
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      background: #f8fafc;
+      border-bottom: 1px solid #e3e3e3;
+      padding: 1rem 0;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: #004aad;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    nav a:hover {
+      color: #0072ff;
+    }
+
+    /* ================================
+       MAIN CONTENT
+    ================================= */
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+      text-align: left;
+    }
+
+    h1 {
+      color: #109648;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* ================================
+       BUTTONS
+    ================================= */
+    .button-row {
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.1s ease-in-out;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-subscribe {
+      background: #1dbf73;
+    }
+
+    .btn-info {
+      background: #0072ff;
+    }
+
+    .btn .emoji {
+      margin-right: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      padding: 3rem 0 2rem;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .hero-banner img {
+        object-fit: cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO BANNER -->
+  <div class="hero-banner">
+    <img src="{{ '/purchase-hero.png?v=2' | relative_url }}" alt="Car Care Hero Banner">
+  </div>
+
+  <!-- NAV MENU -->
+  <nav>
+    <a href="#included">What’s Included</a>
+    <a href="#how">How It Works</a>
+    <a href="#faq">FAQ</a>
+    <a href="#support">Support</a>
+    <a href="#more">More Calendars</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <h1>Thanks for your purchase! Subscribe to your Car Care calendar below. 🚗</h1>
+    <p>Keep your vehicle on schedule with smart reminders that land right in your calendar.</p>
+
+    <div class="button-row">
+      <a href="#" class="btn btn-subscribe">
+        <span class="emoji">📅</span> Subscribe (.ics)
+      </a>
+      <a href="#how" class="btn btn-info">
+        <span class="emoji">ℹ️</span> How It Works
+      </a>
+    </div>
+
+    <p>
+      Works with Apple Calendar, Google Calendar, and Outlook.  
+      Each event includes a 1-day-before alert (you can edit or mute anytime).
+    </p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Life Calendars — All rights reserved.</p>
+    <p>This page was generated by GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>

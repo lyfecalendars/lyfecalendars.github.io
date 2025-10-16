@@ -2,31 +2,16 @@
 title: Car Care
 layout: default
 ---
-<style>
-/* Force the hero to show the entire 1710×200 image */
-.page-header{
-  background: url('/purchase-hero.png?v=4') center/contain no-repeat !important;
-  height: 200px !important;
-  background-color: #ffffff; /* fallback edges if needed */
-}
-/* Hide default title/subtitle over the hero */
-.page-header .project-name,
-.page-header .project-tagline{
-  display: none !important;
-}
-</style>
 
-<!-- ───────────── Hero (replace green banner) ───────────── -->
+<!-- ─────────── HERO: show full image at 200px (no cropping) ─────────── -->
 <style>
-/* Use your hero image and hide the default title/tagline */
-.page-header {
-  background: url('/purchase-hero.png?v=1') center/cover no-repeat !important;
-  height: 260px;
+.page-header{
+  background: url('/purchase-hero.png?v=5') center/contain no-repeat !important;
+  height: 200px !important;
+  background-color: #ffffff; /* subtle fallback for edges */
 }
 .page-header .project-name,
-.page-header .project-tagline {
-  display: none !important;
-}
+.page-header .project-tagline{ display:none !important; }
 
 /* Nav + buttons */
 .lc-nav{
@@ -50,11 +35,10 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 
 @media (max-width:720px){
   .lc-nav{ border-radius:0; width:100%; }
-  .page-header{ height:220px; }
 }
 </style>
 
-<!-- ───────────── Top navigation (in-page anchors only) ───────────── -->
+<!-- ─────────── IN-PAGE MENU ─────────── -->
 <div class="lc-nav" role="navigation" aria-label="Car Care sections">
   <a href="#whats-included">What’s Included</a>
   <span>•</span>
@@ -90,7 +74,7 @@ Time-based cadence that fits most daily drivers (no mileage tracking required):
 - **Wipers & washer fluid** — quarterly (+ pre-winter)  
 - **Air & cabin filters** — twice a year  
 - **Brake visual check** — twice a year  
-- **Fluid spot checks** (coolant, brake, PS, trans as applicable) — seasonal  
+- **Fluid spot checks** — seasonal  
 - **Registration / inspection** — annual reminder  
 - **Detail / wash + underbody rinse** — quarterly (bump in salted climates)
 
@@ -109,7 +93,7 @@ Time-based cadence that fits most daily drivers (no mileage tracking required):
 
 ## <a id="how-it-works"></a>How It Works
 1. Click **Subscribe (.ics)** above.  
-2. Your calendar app will offer to **Subscribe** (best) or **Import**.  
+2. Choose **Subscribe** (best) or **Import** when prompted.  
    - **Subscribe** → adds a **toggleable calendar** that auto-updates.  
    - **Import** → copies events into your main calendar.  
 3. Reminders appear automatically.

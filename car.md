@@ -167,7 +167,7 @@ Questions or ideas? Email **lyfecalendars@gmail.com**.
 - 🏠 **Home Maintenance** → [/home](/home)  
 - ❤️ **Health Check-In** → [/health](/health)
 
-- <!-- FOOTER HERO -->
+<!-- FOOTER HERO -->
 <div class="footer-bleed"></div>
 
 <p style="text-align:center; color:#6a737d; font-size:.9rem; margin-top:.5rem;">

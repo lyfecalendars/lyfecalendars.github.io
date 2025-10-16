@@ -166,3 +166,10 @@ Questions or ideas? Email **lyfecalendars@gmail.com**.
 ## <a id="more-calendars"></a>More Calendars
 - 🏠 **Home Maintenance** → [/home](/home)  
 - ❤️ **Health Check-In** → [/health](/health)
+
+- <!-- FOOTER HERO -->
+<div class="footer-bleed"></div>
+
+<p style="text-align:center; color:#6a737d; font-size:.9rem; margin-top:.5rem;">
+© {{ 'now' | date: '%Y' }} LyfeCalendars. All rights reserved.
+</p>

@@ -85,7 +85,7 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 
 <!-- HERO IMAGE -->
 <div class="hero-bleed"
-     style="background-image:url('{{ "/home-hero.png?v=200" | relative_url }}');">
+     style="background-image:url('{{ "/purchase-hero.png?v=200" | relative_url }}');">
 </div>
 
 <!-- NAVIGATION BAR -->

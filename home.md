@@ -2,7 +2,6 @@
 title: Home Maintenance
 layout: default
 ---
-
 <!-- =================== PAGE STYLES =================== -->
 <style>
 /* Hide the Cayman header on this page */
@@ -64,7 +63,6 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
   .variant-grid{ grid-template-columns: 1fr; }
 }
 </style>
-
 <!-- =================== HERO IMAGE (no overlay) =================== -->
 <div class="hero-bleed"
      style="background-image:url('{{ "/purchase-hero.png?v=120" | relative_url }}');">

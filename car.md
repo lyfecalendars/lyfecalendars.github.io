@@ -37,12 +37,12 @@ hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 @media (max-width:720px){ .lc-grid{ grid-template-columns:1fr; } }
 </style>
 
-## 🚗 Car Care
+## Thanks for your Purchase! Download your 🚗 Car Care Calendar below.
 Keep your vehicle on schedule with smart reminders that land right in your calendar.
 
 <div class="lc-btns">
   <!-- Point this to your storefront (Gumroad/Etsy) OR to the .ics if you want it public -->
-  <a class="lc-btn" href="https://your-store-link">🛒 Get Car Care</a>
+  <a class="lc-btn" href="https://your-store-link">Download Car Care</a>
 </div>
 
 <div class="lc-meta">

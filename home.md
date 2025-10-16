@@ -7,15 +7,15 @@ layout: default
 /* Hide Cayman header */
 .page-header { display:none !important; }
 
-/* HERO + FOOTER IMAGE */
-.hero-bleed,
-.footer-bleed {
+/* HERO (same style as Car) */
+.hero-bleed{
   width: 100vw;
   height: clamp(220px, 38vh, 520px);
   position: relative;
   left: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  background-image: url('{{ "/purchase-hero.png?v=310" | relative_url }}');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain;
@@ -23,91 +23,69 @@ layout: default
   max-width: none !important;
 }
 
-/* FOOTER positioning */
-.footer-bleed {
-  background-position: center bottom;
+/* Footer hero with warm overlay color */
+.footer-bleed{
+  width: 100vw;
+  height: clamp(220px, 38vh, 520px);
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   margin-top: 3rem;
+  background-color: #F8F1DE; /* requested warm tone */
+  background-image: url('{{ "/purchase-footer.png?v=310" | relative_url }}');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  max-width: none !important;
 }
 
-/* NAV BAR */
-.lc-nav {
-  display:flex;
-  gap:.75rem;
-  justify-content:center;
-  background:#f6f8fa;
-  padding:.6rem .9rem;
-  border-radius:10px;
-  margin: 1rem auto 1.25rem;
-  width:fit-content;
+/* In-page nav */
+.lc-nav{
+  display:flex; gap:.75rem; justify-content:center;
+  background:#f6f8fa; padding:.6rem .9rem; border-radius:10px;
+  margin: 1rem auto 1.25rem; width:fit-content;
   box-shadow:0 1px 0 rgba(0,0,0,.04);
 }
-.lc-nav a { text-decoration:none; font-weight:600; color:#0b5bd3; }
-.lc-nav a:hover { text-decoration:underline; }
-.lc-nav span { opacity:.5 }
+.lc-nav a{ text-decoration:none; font-weight:600; color:#0b5bd3; }
+.lc-nav a:hover{ text-decoration:underline; }
+.lc-nav span{ opacity:.5 }
 
-/* BUTTONS */
-.lc-btns {
-  display:flex;
-  gap:.6rem;
-  flex-wrap:wrap;
-  margin:.9rem 0 1.25rem;
+/* Buttons */
+.lc-btns{ display:flex; gap:.6rem; flex-wrap:wrap; margin:.9rem 0 1.25rem; }
+.lc-btn{
+  display:inline-block; padding:.7rem 1rem; border-radius:10px;
+  background:#2ea44f; color:#fff !important; font-weight:700; text-decoration:none;
 }
-.lc-btn {
-  display:inline-block;
-  padding:.7rem 1rem;
-  border-radius:10px;
-  background:#2ea44f;
-  color:#fff !important;
-  font-weight:700;
-  text-decoration:none;
-}
-.lc-btn.secondary { background:#0366d6; }
+.lc-btn.secondary{ background:#0366d6; }
 
-/* VARIANT SECTION */
-.variant-wrap { margin:1rem 0 1.25rem; }
-.variant-columns {
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:1rem;
-}
-.variant-card {
-  background:#0f172a;
-  color:#fff;
-  border-radius:12px;
-  padding:1rem;
+/* Variants */
+.variant-wrap{ margin:1rem 0 1.25rem; }
+.variant-columns{ display:grid; grid-template-columns: 1fr 1fr; gap:1rem; }
+.variant-card{
+  background:#0f172a; color:#fff; border-radius:12px; padding:1rem;
   box-shadow:0 4px 14px rgba(2,6,23,.15);
 }
-.variant-card h3 {
-  margin:.25rem 0 1rem;
-  font-size:1.15rem;
+.variant-card h3{ margin:.25rem 0 1rem; font-size:1.15rem; }
+.variant-grid{ display:grid; gap:.6rem; }
+.variant-btn{
+  display:block; text-align:center; padding:.7rem 1rem; border-radius:10px;
+  background:#111827; color:#fff; font-weight:700; text-decoration:none;
 }
-.variant-grid { display:grid; gap:.6rem; }
-.variant-btn {
-  display:block;
-  text-align:center;
-  padding:.7rem 1rem;
-  border-radius:10px;
-  background:#111827;
-  color:#fff;
-  font-weight:700;
-  text-decoration:none;
-}
-.variant-btn:hover { filter:brightness(1.08); }
+.variant-btn:hover{ filter:brightness(1.08); }
 
-.lc-meta { color:#586069; font-size:.95rem; }
-hr.lite { border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
+.lc-meta{ color:#586069; font-size:.95rem; }
+hr.lite{ border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
 
 @media (max-width: 900px){
-  .variant-columns { grid-template-columns: 1fr; }
+  .variant-columns{ grid-template-columns: 1fr; }
 }
 </style>
 
-<!-- HERO IMAGE -->
-<div class="hero-bleed"
-     style="background-image:url('{{ "/purchase-hero.png?v=300" | relative_url }}');">
-</div>
+<!-- HERO -->
+<div class="hero-bleed"></div>
 
-<!-- NAVIGATION BAR -->
+<!-- NAV -->
 <div class="lc-nav" role="navigation" aria-label="Home Maintenance sections">
   <a href="#whats-included">What’s Included</a>
   <span>•</span>
@@ -120,9 +98,7 @@ hr.lite { border:0; border-top:1px solid #eaecef; margin:1.25rem 0; }
   <a href="#more-calendars">More Calendars</a>
 </div>
 
-<!-- MAIN CONTENT -->
 ## Thanks for your purchase! Subscribe to your Home Maintenance calendar below. 🏠
-
 Keep your home safe and efficient year-round with smart reminders that land right in your calendar.
 
 <div class="lc-btns">
@@ -165,8 +141,6 @@ Works with Apple Calendar, Google Calendar, and Outlook. Each event includes a 1
 <hr class="lite" />
 
 ## <a id="whats-included"></a>What’s Included
-Your calendar includes recurring reminders for essential home maintenance, tailored by home type and climate:
-
 - HVAC filter changes — every 2–3 months  
 - Smoke/CO detector tests — twice per year  
 - Dryer vent cleaning — semiannual  
@@ -178,40 +152,32 @@ Your calendar includes recurring reminders for essential home maintenance, tailo
 - Safety kit refresh — annual  
 - Furnace/AC service — spring & fall  
 
-**Cold Climate:** adds extra alerts for snow prep, heating checks, and pipe protection  
-**Warm Climate:** focuses more on pest prevention and cooling maintenance
+**Cold Climate:** adds snow prep, heating checks, pipe protection  
+**Warm Climate:** emphasizes cooling service and pest prevention
 
 <hr class="lite" />
 
 ## <a id="how-it-works"></a>How It Works
-1. Click a variant above to **subscribe** to that calendar.  
-2. Your calendar app will prompt to add it — choose **Subscribe** (recommended) or **Import**.  
-   - *Subscribe*: auto-updates when we add new reminders.  
-   - *Import*: static copy that you can edit independently.  
-3. Adjust notification times or mute individual alerts anytime.
+1. Click a variant above to subscribe.  
+2. Choose **Subscribe** (auto-updating) or **Import** (static copy).  
+3. Adjust notification times or mute alerts anytime.
 
-**Tip:**  
-- In **Google Calendar** → *Other calendars → Add by URL*  
-- In **Outlook** → *Add calendar → From Internet*  
-- In **Apple Calendar** → *File → New Calendar Subscription*
+**Quick tips**
+- **Google Calendar:** Other calendars → Add by URL  
+- **Outlook:** Add calendar → From Internet  
+- **Apple Calendar:** File → New Calendar Subscription
 
 <hr class="lite" />
 
 ## <a id="faq"></a>FAQ
-**Can I combine multiple variants?**  
-Yes — subscribe to one per climate and one per home type if you manage multiple properties.
-
-**Are these tasks editable?**  
-Absolutely. You can rename, move, or duplicate events directly in your calendar.
-
-**Will I get duplicate reminders if I switch variants?**  
-If both calendars contain similar tasks, duplicates may appear — unsubscribe from the older feed first.
+**Can I add my own tasks?** Yes—duplicate or create events alongside this calendar.  
+**Multiple properties?** Subscribe to multiple variants as needed.  
+**Switching variants?** Unsubscribe from the old one to avoid duplicates.
 
 <hr class="lite" />
 
 ## <a id="support"></a>Support
-Questions or feedback?  
-📧 Email **lyfecalendars@gmail.com**
+Questions or feedback? Email **lyfecalendars@gmail.com**.
 
 <hr class="lite" />
 
@@ -220,9 +186,7 @@ Questions or feedback?
 - ❤️ **Health Check-In** → [/health](/health)
 
 <!-- FOOTER HERO -->
-<div class="footer-bleed"
-     style="background-image:url('{{ "/purchase-footer.png?v=300" | relative_url }}');">
-</div>
+<div class="footer-bleed"></div>
 
 <p style="text-align:center; color:#6a737d; font-size:.9rem; margin-top:.5rem;">
 © {{ 'now' | date: '%Y' }} LyfeCalendars. All rights reserved.
